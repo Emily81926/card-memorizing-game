@@ -1,0 +1,111 @@
+#cards{
+display: flex;
+flex-wrap: wrap;
+width: 85%;
+margin: 0 auto;
+}
+
+.card{
+box-sizing: border-box;
+flex: 7% 1 1;
+height: 8vw;
+border: 2px solid #e0e0e0;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+margin: 2px;
+}
+
+.card img{
+  max-width: 30%;
+  align-self: center;
+  
+}
+
+.card p{
+  margin: 3px;
+  font-size: 10px;
+
+}
+
+.card p:last-child{
+  transform: rotate(180deg);
+}
+
+.back {
+ background: url('http://pic.616pic.com/ys_bnew_img/00/34/52/mmDk0z3jKR.jpg'); 
+ background-size: cover;
+}
+
+.paired{
+  background-color: #dae0e3;
+}
+
+#header{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: flex-end;
+  width: 85%;
+  
+}
+
+#header .title{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  
+}
+
+#header .title img{
+  max-width: 3em;
+}
+
+#header .title h3{
+  padding-left: 0.5em;
+}
+
+#header .score {
+  margin: 0;
+  color: #6c90ac;
+}
+
+#header .tried {
+  margin-top: 0;
+}
+
+.wrong{
+  animation-name: wrongAnimation;
+  animation-duration: 0.2s;
+  animation-iteration-count: 5;
+}
+
+@keyframes wrongAnimation {
+  to {
+    border: 2px solid #ffd54f;
+  }
+  
+}
+
+.completed{
+  position: absolute;
+  z-index: 999;
+  top: 33vh;
+  background-color: rgba(232, 246, 254, 0.8);
+  width: 100vw;
+  padding: 50px 0;
+}
+
+.completed > p {
+  font-size: 1.5em;
+  color: black;
+  text-align: center;
+  margin: 0;
+}
+
+.completed > p:first-child{
+  font-size: 3em;
+  font-weight: 700;
+  color: #758d9a;
+
+}
